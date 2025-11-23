@@ -6,59 +6,29 @@ The pipeline is structured into three stages:
 
 ### **Stage 1 — Preprocessing**  
 Normalization, histogram equalization, intensity clipping, ROI extraction, and NIfTI CBCT slicing.
+```bash
+python src/YOLO_Stage1_preprocessing.py
+```
 
 ### **Stage 2 — Segmentation (YOLOv8)**  
 Training the YOLO model on preprocessed slices, generating labels, visualizing masks, and computing IoU/Dice scores.
+```bash
+python src/YOLO_Stage2_segmentation.py
+```
 
 ### **Stage 3 — Testing & Evaluation**  
 Loading the trained model, performing inference on unseen CBCT scans, visualizing overlay masks, and collecting metrics.
-
+```bash
+python src/YOLO_Stage3_testing.py
+```
 ---
 
-## 📂 Directory Structure
-
-```
-ai-oral-segmentation/
-│
-├── notebooks/
-│   ├── YOLO_Stage1_preprocessing_RSI2025.ipynb
-│   ├── YOLO_Stage2_segmentation_RSI2025.ipynb
-│   └── YOLO_Stage3_testing_RSI2025.ipynb
-│
-└── src/
-    ├── YOLO_Stage1_preprocessing.py
-    ├── YOLO_Stage2_segmentation.py
-    └── YOLO_Stage3_testing.py
-```
-
-Each python file is extracted from the corresponding notebook.
-
----
 
 ##  Environment Setup (Conda)
 
 ```bash
 conda env create -f environment.yml
 conda activate ai-oral-seg
-```
-
----
-
-## Running the Pipeline
-
-### **Stage 1 preprocessing**
-```bash
-python src/YOLO_Stage1_preprocessing.py
-```
-
-### **Stage 2 segmentation**
-```bash
-python src/YOLO_Stage2_segmentation.py
-```
-
-### **Stage 3 testing**
-```bash
-python src/YOLO_Stage3_testing.py
 ```
 
 ---
