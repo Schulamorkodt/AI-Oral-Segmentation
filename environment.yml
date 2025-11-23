@@ -1,0 +1,17 @@
+name: ai-oral-seg
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - nibabel
+  - scikit-image
+  - opencv
+  - ipykernel
+  - pip
+  - pip:
+      - ultralytics
+      - nibabel
+      - pydicom
+      - tqdm
