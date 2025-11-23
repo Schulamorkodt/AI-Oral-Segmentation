@@ -1,6 +1,6 @@
 # AI Oral Segmentation Using YOLOv8 + CBCT
 
-This repository contains the full 3-stage YOLOv8 pipeline for automated tooth detection and segmentation from CBCT scans for the *Research Science Institute (RSI 2025)*.
+This repository contains the full 3-stage YOLOv8 pipeline for automated tooth detection and segmentation from CBCT scans
 
 The pipeline is structured into three stages:
 
